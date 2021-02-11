@@ -32,6 +32,9 @@ class ViewController: UIViewController {
         let brazilPrices: [Float] = myDevices.map({ return $0.price * 6})
         print("Prices: \(brazilPrices)")
         // Reduce
+        
+        let totalBrazilPrice: Float = brazilPrices.reduce(0.0, +)
+        print(totalBrazilPrice)
     }
 }
 
