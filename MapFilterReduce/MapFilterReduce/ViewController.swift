@@ -28,6 +28,9 @@ class ViewController: UIViewController {
         let iPhones = myDevices.filter({ return $0.type == "iPhone"})
         print(iPhones)
         // Map
+        
+        let brazilPrices: [Float] = myDevices.map({ return $0.price * 6})
+        print("Prices: \(brazilPrices)")
         // Reduce
     }
 }
