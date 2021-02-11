@@ -12,23 +12,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        let myDevices = [myImacPro, myIphone6Plus, myIphone7, myIpad, myAppleWatch, myAppleTv]
-        
-        print(principal())
+        principal()
     }
-
     
-    var myImacPro = Device(type: "Imac Pro", price: 4999.00, color: "Space grey")
-    var myIphone6Plus = Device(type: "Iphone", price: 799.00, color: "white")
-    var myIphone7 = Device(type: "Iphone", price: 699.00, color: "Black")
-    var myIpad = Device(type: "Ipad", price: 599.00, color: "Space grey")
-    var myAppleWatch = Device(type: "Apple Watch", price: 349.00, color: "Space grey")
-    var myAppleTv = Device(type: "Apple TV", price: 199.00, color: "Black")
-    
+    let myImacPro = Device(type: "Imac Pro", price: 4999.00, color: "Space grey")
+    let myIphone6Plus = Device(type: "iPhone", price: 799.00, color: "white")
+    let myIphone7 = Device(type: "iPhone", price: 699.00, color: "Black")
+    let myIpad = Device(type: "Ipad", price: 599.00, color: "Space grey")
+    let myAppleWatch = Device(type: "Apple Watch", price: 349.00, color: "Space grey")
+    let myAppleTv = Device(type: "Apple TV", price: 199.00, color: "Black")
     
     func principal() {
-        
+        let myDevices = [myImacPro, myIphone6Plus, myIphone7, myIpad, myAppleWatch, myAppleTv]
+        // Filter
+        let iPhones = myDevices.filter({ return $0.type == "iPhone"})
+        print(iPhones)
+        // Map
+        // Reduce
     }
 }
 
